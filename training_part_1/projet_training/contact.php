@@ -16,14 +16,14 @@ $color = $ouvert ? 'green' : 'red';
 // }
 require './elements/header.php';
 ?>
-<div class="separator"></div>
+<div class="bigSeparator"></div>
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <h2>Retrouvez nous !</h2>
             <div style="height:60%; width:60%" id="map"></div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <h2>Horaires d'ouvertures</h2>
             <?php if ($ouvert) : ?>
                 <div class="alert alert-success">

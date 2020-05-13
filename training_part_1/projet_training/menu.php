@@ -7,7 +7,7 @@ foreach ($lignes as $k => $ligne) {
 }
 require 'elements/header.php';
 ?>
-<div class="separator"></div>
+<div class="bigSeparator"></div>
 <div class="container">
 <h1>Menu</h1>
 

@@ -1,11 +1,10 @@
-<!-- </main> -->
-<!-- /.container -->
+
 <footer>
     <hr>
-    <div class="row mr-0 ml-0">
-        <div class="col-md-4">
-            <h5>Inscription newsletter</h5>
-            <form class="form-inline" action="/news-letter.php" method="POST">
+    <div class="row mr-0 md-12 ml-0 footer">
+        <div class="col-md-3">
+            <h5 class="h5-footer">Inscription newsletter</h5>
+            <form class="form" action="/news-letter.php" method="POST">
                 <div class="form-group">
                     <div class="form-group">
                         <input class="form-control" type="email" name="email" placeholder="Entrer votre adresse email" required>
@@ -20,13 +19,33 @@
             ajouter_vue();
             $vues = nombre_vues();
             ?>
-            Il y a <?= $vues ?> visite<?php if ($vues > 1) : ?>s<?php endif; ?> sur le site
+            <h5 class="h5-footer"> Nombre de visite<?php if ($vues > 1) : ?>s<?php endif; ?> sur le site</h5>
+            <div>
+                <i class="far fa-hand-point-down"></i>
+            </div>
+            <div>
+                <h5 class="numberViews">
+                    <?= $vues ?>
+                </h5>
+            </div>
+            
         </div>
-        <div class="col-md-4">
-            <h5>Navigation</h5>
+        <div class="col-md-3">
+            <h5 class="h5-footer">Navigation</h5>
             <ul class="list-unstyled text-small">
                 <?= nav_menu(''); ?>
             </ul>
+        </div>
+        <div class="col-md-3">
+            <h5 class="h5-footer">Social media</h5>
+            <div class="s-m">
+                <a href="#"><i class="fab fa-facebook-f icn-sc-media"></i></a>
+                <a href="#"><i class="fab fa-discord icn-sc-media"></i></a>
+                <a href="#"><i class="fab fa-github icn-sc-media"></i></a>
+                <a href="#"><i class="fab fa-linkedin icn-sc-media"></i></a>
+
+            </div>
+
         </div>
     </div>
 </footer>

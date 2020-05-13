@@ -31,47 +31,50 @@ $mois = [
 ];
 require 'elements/header.php';
 ?>
-<div class="row">
-    <div class="col-md-4">
-        <div class="list-group">
-            <?php for ($i = 0; $i < 5; $i++) : ?>
-                <a class="list-group-item <?= $annee - $i == $annee_selection ? 'active' : ''; ?>" style="text-decoration:none" href="dashboard.php?annee=<?= $annee - $i ?>"><?= $annee - $i ?></a>
-                <?php if ($annee - $i == $annee_selection) : ?>
-                    <?php foreach ($mois as $numero => $nom) : ?>
-                        <a class="list-group-item <?= $numero == $mois_selection ? 'active' : ''; ?>" style="text-decoration:none;border:blue solid 1px;border-radius:2px;" href="dashboard.php?annee=<?= $annee_selection ?>&mois=<?= $numero ?>">
-                            <?= $nom ?>
-                        </a>
-                    <?php endforeach ?>
-                <?php endif ?>
-            <?php endfor ?>
-        </div>
-    </div>
-    <div class="col-md-8">
-        <div class="card mb-4">
-            <div class="card-body">
-                <strong style="font-size:3em; color:green"><?= $total ?></strong></br>
-                Visite<?= $total > 1 ? 's' : '' ?> total
+<div class="bigSeparator"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="list-group">
+                <?php for ($i = 0; $i < 5; $i++) : ?>
+                    <a class="list-group-item <?= $annee - $i == $annee_selection ? 'active' : ''; ?>" style="text-decoration:none" href="dashboard.php?annee=<?= $annee - $i ?>"><?= $annee - $i ?></a>
+                    <?php if ($annee - $i == $annee_selection) : ?>
+                        <?php foreach ($mois as $numero => $nom) : ?>
+                            <a class="list-group-item <?= $numero == $mois_selection ? 'active' : ''; ?>" style="text-decoration:none;border:blue solid 1px;border-radius:2px;" href="dashboard.php?annee=<?= $annee_selection ?>&mois=<?= $numero ?>">
+                                <?= $nom ?>
+                            </a>
+                        <?php endforeach ?>
+                    <?php endif ?>
+                <?php endfor ?>
             </div>
         </div>
-        <?php if (isset($detail)) : ?>
-            <h2>Détails des visites pour le mois</h2>
-            <table class="table table-striped">
-                <thead>
-                    <th>Jour</th>
-                    <th>Nombre de visite</th>
-                </thead>
-                <tbody>
-                    <?php foreach ($detail as $ligne) : ?>
-                        <tr>
-                            <td><?= $ligne['annee'] ?></td>
-                            <td><?= $ligne['mois'] ?></td>
-                            <td><?= $ligne['jour'] ?></td>
-                            <td><?= $ligne['visites'] ?> visite<?= $ligne['visites'] > 1 ? 's': '' ;?></td>
-                        </tr>
-                    <?php endforeach ?>
-                </tbody>
-            </table>
-        <?php endif; ?>
+        <div class="col-md-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <strong style="font-size:3em; color:green"><?= $total ?></strong></br>
+                    Visite<?= $total > 1 ? 's' : '' ?> total
+                </div>
+            </div>
+            <?php if (isset($detail)) : ?>
+                <h2>Détails des visites pour le mois</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <th>Jour</th>
+                        <th>Nombre de visite</th>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($detail as $ligne) : ?>
+                            <tr>
+                                <td><?= $ligne['annee'] ?></td>
+                                <td><?= $ligne['mois'] ?></td>
+                                <td><?= $ligne['jour'] ?></td>
+                                <td><?= $ligne['visites'] ?> visite<?= $ligne['visites'] > 1 ? 's': '' ;?></td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
 

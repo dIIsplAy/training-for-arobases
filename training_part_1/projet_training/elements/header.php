@@ -25,7 +25,11 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
     </title>
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
+    <!-- GOOGLE FONT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Alegreya+Sans|B612">
 
+    <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/80834d3217.js" crossorigin="anonymous"></script>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Favicons -->
@@ -47,64 +51,63 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
 
 <body>
     <header>
-    <nav class="navbar navbar-expand-md navbar-dark  mb-4 fixed-top navHeader">
-        <a class="navbar-brand" href="#">Display</a>
-        <button class="navbar-toggler"  id="burgerNav"type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <nav class="navbar navbar-expand-md navbar-dark  mb-4 fixed-top navHeader">
+            <a class="navbar-brand" href="#">Display</a>
+            <button class="navbar-toggler" id="burgerNav" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <?= nav_menu('nav-link'); ?>
-            </ul>
-            <ul class="navbar-nav">
-                <?php if (connected()) : ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout.php">Log out</a>
-                    </li>
-                <?php else : ?>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                            Login
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <?= nav_menu('nav-link'); ?>
+                </ul>
+                <ul class="navbar-nav">
+                    <?php if (connected()) : ?>
+                        <li class="nav-item">
+                            <a class="btn-style-2" href="/logout.php">Logout</a>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item">
+                            <button type="button" class="btn-style-1" data-toggle="modal" data-target="#myModal">
+                                Login
+                            </button>
+                        </li>
+                    <?php endif ?>
+                </ul>
+            </div>
+        </nav>
+        <div class="modal fade" style="z-index:1000000" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">Sign In Form</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
                         </button>
-                    </li>
-                <?php endif ?>
-            </ul>
-        </div>
-    </nav>
-    <div class="modal fade"  style="z-index:1000000"id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="col-md-8 mt-3">
-                        <h2>Welcom</h2>
-                        <form action="login.php" method="POST">
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="usernameHelp" placeholder="Enter username">
-                                <small id="usernameHelp" class="form-text text-muted">Tell us who you are.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password</label>
-                                <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <div class="modal-body">
+                        <div class="col-md-8 mt-3">
+                            <h3>Welcom</h3>
+                            <form action="login.php" method="POST">
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="usernameHelp" placeholder="Enter username">
+                                    <small id="usernameHelp" class="form-text text-muted">Tell us who you are.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password</label>
+                                    <input type="password" name="pwd" class="form-control" id="pwd" placeholder="Password">
+                                </div>
+                                <button type="submit" style="left: 50% !important;top: 0%!important;margin-top:10% !important" class="btn-style-1">login</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </header>
 
     <!-- <main role="main" class="container-fluid container"> -->
-

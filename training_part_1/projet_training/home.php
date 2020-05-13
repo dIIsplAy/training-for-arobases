@@ -4,10 +4,9 @@ $title = "page acceuil";
 
 require './elements/header.php';
 ?>
-<div class="separator"></div>
 <div class="paralaxHome">
   <section class="sectionParalax">
-    <h2 id="text"> Lorem ipsum</h2>
+    <h2 id="text"> Simple parallax </h2>
     <img src="/image/assets/bg.jpg" id="bg">
     <img src="/image/assets/moon.png" id="moon">
     <img src="/image/assets/mountain.png" id="mountain">
@@ -16,6 +15,7 @@ require './elements/header.php';
 </div>
 <div class="separator"></div>
 <div class="container revealBox">
+  <h2 >Simple responsiv grid</h2>
   <div class="homeBx">
     <div class="containerBox">
       <div class="card">
@@ -65,24 +65,29 @@ require './elements/header.php';
     </div>
   </div>
 </div>
+<div class="separatorSmall"></div>
+<div class="container">
+  <h2>Display content exemple</25>
+  <div class="row contentTestBox">
+    <div class="col-md-5 content-test contentRvl-1">
+      <h3>Test</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda vel consectetur beatae dolorum aliquam,</p>
+    </div>
+    <div class="test-separator"></div>
+    <div class="col-md-5 content-test contentRvl-2">
+    <h3>Test</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda vel consectetur beatae dolorum aliquam,</p>
+    </div>
+  </div>
+</div>
 
-<a class="neonBtn"href="#">
+<!-- <a class="neonBtn"href="#">
   <span></span>
   <span></span>
   <span></span>
   <span></span>
   neon button
-</a>
-
-
-
-<!-- <div class="starter-template">
-  <h1>Bootstrap starter template</h1>
-  <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-</div> -->
-
-
-
+</a> -->
 
 
 <?php require './elements/footer.php' ?>
