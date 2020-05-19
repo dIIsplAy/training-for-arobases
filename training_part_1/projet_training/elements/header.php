@@ -23,6 +23,9 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
         <?php endif ?>
 
     </title>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
     <!-- GOOGLE FONT -->
@@ -60,6 +63,17 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
                     <?= nav_menu('nav-link'); ?>
+                    <div class="dropdown show">
+                        <a class="btn btn-secondary dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Others
+                        </a>
+    
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="horizontal-scroll.php">Horizontal Scroll page</a>
+                            <a class="dropdown-item" href="slider-page.php">Slider</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
                 </ul>
                 <ul class="navbar-nav">
                     <?php if (connected()) : ?>

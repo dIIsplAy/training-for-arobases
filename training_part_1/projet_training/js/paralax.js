@@ -92,3 +92,8 @@ ScrollReveal().reveal('.revealBox, .card',
         duration:1000,
         scale:0.25,
     })
+
+
+    // SLIDER HORIZONTAL PAGE
+
+    
