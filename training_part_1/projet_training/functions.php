@@ -15,9 +15,16 @@ function nav_menu(string $linkClass): string
     return
         nav_item('/home.php', 'Acceuil', $linkClass) .
         nav_item('/contact.php', 'Contact', $linkClass) .
-        nav_item('/jeux-icecream.php', 'Ice cream', $linkClass).
-        nav_item('/menu.php', 'Menu restaurant', $linkClass);
-        
+        nav_item('/one-page-cv.php', 'About me', $linkClass);
+    }
+function nav_menu_one_page(string $linkClass): string
+{
+    return
+        nav_item('#section-one', 'Acceuil', $linkClass) .
+        nav_item('#section-two', 'Contact', $linkClass) .
+        nav_item('#section-three', 'About me', $linkClass).
+        nav_item('#section-four', 'toto', $linkClass) .
+        nav_item('#section-five', 'tata', $linkClass);
     }
 
 function checkbox(string $name, string $value, array $data): string

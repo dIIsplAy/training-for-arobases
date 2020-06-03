@@ -13,8 +13,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.6">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>
         <?php if (isset($title)) : ?>
             <?= $title; ?>
@@ -25,9 +24,12 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
     </title>
     <!-- JQUERY -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- CSS SWIPER.JS FOR SLIDER PAGE -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="/styles/styles.css">
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/"> -->
     <!-- GOOGLE FONT -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Alegreya+Sans|B612">
 
@@ -71,7 +73,9 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a class="dropdown-item" href="horizontal-scroll.php">Horizontal Scroll page</a>
                             <a class="dropdown-item" href="slider-page.php">Slider</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="infinite-scroll-grid.php">Reveal grid page infinite</a>
+                            <a class="dropdown-item" href="jeux-icecream.php">Made your ice cream</a>
+                            <a class="dropdown-item" href="menu.php">Menu food</a>
                         </div>
                     </div>
                 </ul>
