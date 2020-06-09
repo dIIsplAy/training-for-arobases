@@ -52,6 +52,7 @@
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="/js/paralax.js"></script>
 <script src="/js/functions.js"></script>
+<script src="/js/timeline.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
 <script>
     window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')

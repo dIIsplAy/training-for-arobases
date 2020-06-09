@@ -256,6 +256,7 @@ ScrollReveal().reveal('.section-card', {
     duration: 600,
 
 
+
 })
 
 ScrollReveal().reveal('#h1-section-five', {
