@@ -6,12 +6,12 @@
         <input id="inputSideMenu" type="checkbox" name="">
         <span class="icon-sidebar"></span>
         <ul id="listSideBar">
-            <li class="elements-list-sidebar strike"><a id="sectionOne"href="#section-one">section one</a></li>
-            <li class="elements-list-sidebar strike"><a id="sectionTwo" href="#section-two">section two</a></li>
-            <li class="elements-list-sidebar strike"><a id="sectionThree" href="#section-three">section three</a></li>
-            <li class="elements-list-sidebar strike"><a id="sectionFour" href="#section-four">section four</a></li>
-            <li class="elements-list-sidebar strike"><a id="sectionFive" href="#section-five">section five</a></li>
-            <li class="elements-list-sidebar strike"><a id="sectionSix" href="#section-six">section six</a></li>
+            <li class="elements-list-sidebar strike"><a id="sectionOne"href="#section-one">About me</a></li>
+            <li class="elements-list-sidebar strike"><a id="sectionTwo" href="#section-two">Life style</a></li>
+            <li class="elements-list-sidebar strike"><a id="sectionThree" href="#section-three">Work</a></li>
+            <li class="elements-list-sidebar strike"><a id="sectionFour" href="#section-four">Passions</a></li>
+            <li class="elements-list-sidebar strike"><a id="sectionFive" href="#section-five">Get in toutch</a></li>
+            <li class="elements-list-sidebar strike"><a id="sectionSix" href="#section-six">More incoming</a></li>
         </ul>
     </div>
 </div>

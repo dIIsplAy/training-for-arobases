@@ -8,7 +8,7 @@
         };
         selectors.item.eq(0).addClass(selectors.activeClass);
         selectors.id.css(
-            "background-image",
+            // "background-image",
             "url(" +
             selectors.item
             .first()
@@ -27,7 +27,7 @@
                 if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
                     selectors.item.removeClass(selectors.activeClass);
                     selectors.id.css(
-                        "background-image",
+                        // "background-image",
                         "url(" +
                         selectors.item
                         .last()
@@ -38,7 +38,7 @@
                     selectors.item.last().addClass(selectors.activeClass);
                 } else if (pos <= max - 40 && pos >= min) {
                     selectors.id.css(
-                        "background-image",
+                        // "background-image",
                         "url(" +
                         $(this)
                         .find(selectors.img)

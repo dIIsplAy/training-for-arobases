@@ -60,7 +60,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
             </button>
 
             <div class="collapse navbar-collapse nav-collapse-one-page" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto justify-content-center">
                     <?= nav_menu_one_page('nav-link','displayValue'); ?>
                 </ul>
                 <ul class="navbar-nav">

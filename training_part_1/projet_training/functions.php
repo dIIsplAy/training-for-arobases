@@ -30,11 +30,11 @@ function nav_menu(string $linkClass): string
 function nav_menu_one_page(string $linkClass, string $displayValue): string
 {
     return
-        nav_item_one_page('#section-one', 'Acceuil', $linkClass, $displayValue) .
-        nav_item_one_page('#section-two', 'Contact', $linkClass, $displayValue) .
-        nav_item_one_page('#section-three', 'About me', $linkClass, $displayValue).
-        nav_item_one_page('#section-four', 'toto', $linkClass, $displayValue) .
-        nav_item_one_page('#section-five', 'tata', $linkClass, $displayValue);
+        nav_item_one_page('#section-one', 'About me', $linkClass, $displayValue) .
+        nav_item_one_page('#section-two', 'Life style', $linkClass, $displayValue) .
+        nav_item_one_page('#section-three', 'Work', $linkClass, $displayValue).
+        nav_item_one_page('#section-four', 'Passions', $linkClass, $displayValue) .
+        nav_item_one_page('#section-five', 'Contact', $linkClass, $displayValue);
     }
 
 
