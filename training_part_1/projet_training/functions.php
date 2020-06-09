@@ -9,6 +9,16 @@ function nav_item(string $lien, string $title, string $linkClass = ''): string
                     <a class="' . $linkClass . '" href="' . $lien . '">' . $title . '</a>
                 </li>';
 }
+function nav_item_one_page(string $lien, string $title, string $linkClass = '', string $displayValue): string
+{
+    $classe = 'nav-item';
+    if ($_SERVER['SCRIPT_NAME'] === $lien) {
+        $classe = $classe .  '';
+    }
+    return '<li class="' . $classe . '">
+                    <a class="' . $linkClass . ' '.  $displayValue .'" href="' . $lien . '">' . $title . '</a>
+                </li>';
+}
 
 function nav_menu(string $linkClass): string
 {
@@ -17,15 +27,16 @@ function nav_menu(string $linkClass): string
         nav_item('/contact.php', 'Contact', $linkClass) .
         nav_item('/one-page-cv.php', 'About me', $linkClass);
     }
-function nav_menu_one_page(string $linkClass): string
+function nav_menu_one_page(string $linkClass, string $displayValue): string
 {
     return
-        nav_item('#section-one', 'Acceuil', $linkClass) .
-        nav_item('#section-two', 'Contact', $linkClass) .
-        nav_item('#section-three', 'About me', $linkClass).
-        nav_item('#section-four', 'toto', $linkClass) .
-        nav_item('#section-five', 'tata', $linkClass);
+        nav_item_one_page('#section-one', 'Acceuil', $linkClass, $displayValue) .
+        nav_item_one_page('#section-two', 'Contact', $linkClass, $displayValue) .
+        nav_item_one_page('#section-three', 'About me', $linkClass, $displayValue).
+        nav_item_one_page('#section-four', 'toto', $linkClass, $displayValue) .
+        nav_item_one_page('#section-five', 'tata', $linkClass, $displayValue);
     }
+
 
 function checkbox(string $name, string $value, array $data): string
 {

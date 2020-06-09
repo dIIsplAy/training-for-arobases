@@ -51,7 +51,6 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
 </head>
 
 <body>

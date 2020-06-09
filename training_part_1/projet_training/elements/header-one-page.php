@@ -56,15 +56,15 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark  mb-4 fixed-top navHeader" style="background-color: #000000 !important">
+        <nav class="navbar navbar-expand-md navbar-dark  mb-4 fixed-top navHeader nav-one-page" style="background-color: #000000 !important">
             <a class="navbar-brand" href="#">Display</a>
             <button class="navbar-toggler" id="burgerNav" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <div class="collapse navbar-collapse nav-collapse-one-page" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
-                    <?= nav_menu_one_page('nav-link'); ?>
+                    <?= nav_menu_one_page('nav-link','displayValue'); ?>
                 </ul>
                 <ul class="navbar-nav">
                     <?php if (connected()) : ?>
@@ -73,7 +73,7 @@ require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SE
                         </li>
                     <?php else : ?>
                         <li class="nav-item">
-                            <button type="button" class="btn-style-1" data-toggle="modal" data-target="#myModal">
+                            <button type="button" class="btn-style-1 btn-one-page-nav" data-toggle="modal" data-target="#myModal">
                                 Login
                             </button>
                         </li>
