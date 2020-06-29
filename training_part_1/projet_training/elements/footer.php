@@ -15,9 +15,10 @@
         </div>
         <div class="col-md-3">
             <?php
-            require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
-            ajouter_vue();
-            $vues = nombre_vues();
+            require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'class' . DIRECTORY_SEPARATOR . 'DoubleCompteur.php';
+            $compteur = new DoubleCompteur(dirname(__DIR__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'compteur');
+            $compteur->incrementer();
+            $vues = $compteur->recuperer();
             ?>
             <h5 class="h5-footer"> Nombre de visite<?php if ($vues > 1) : ?>s<?php endif; ?> sur le site</h5>
             <div>
